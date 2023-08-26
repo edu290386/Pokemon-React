@@ -1,5 +1,5 @@
 export const StatisticPokemon = ({ stats }) => {
-  console.log(stats)
+  
   return (
     <>
       <section className="w-[250px]">

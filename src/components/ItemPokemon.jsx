@@ -1,12 +1,13 @@
 import { AbilitiesPokemon } from "./AbilitiesPokemon";
+import { EvolutionPokemon } from "./EvolutionPokemon";
 import { InformationPokemon } from "./InformationPokemon";
 import { StatisticPokemon } from "./StatisticPokemon";
 import { TypePokemon } from "./TypePokemon";
 
-export const ItemPokemon = ({ infoPokemon }) => {
+export const ItemPokemon = ({ infoPokemon, bioPokemon, evolutionPokemon }) => {
   const { sprites, types, abilities, id, name, height, weight, stats } =
     infoPokemon;
-
+    
   return (
     <>
       <a
@@ -25,8 +26,9 @@ export const ItemPokemon = ({ infoPokemon }) => {
             height={height}
             weight={weight}
           />
-          <TypePokemon types={types} />
           <AbilitiesPokemon abilities={abilities} />
+          <TypePokemon types={types} />
+          <EvolutionPokemon evolutionPokemon={evolutionPokemon} bioPokemon={bioPokemon}/>
           <StatisticPokemon stats={stats} />
         </div>
       </a>
