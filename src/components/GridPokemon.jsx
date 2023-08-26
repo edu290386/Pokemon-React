@@ -1,22 +1,24 @@
-import { useEffect, useState } from "react";
-import { getPokemon } from "../helpers/getPokemon";
 import { ItemPokemon } from "./ItemPokemon";
+import { useFetchPokemon } from "../hooks/useFetchPokemon";
 
 export const GridPokemon = ({ pokemon }) => {
-  const [infoPokemon, setInfoPokemon] = useState([]);
-  
-  const getInfoPokemon = async () => {
-    const newInfo = await getPokemon(pokemon);
-    setInfoPokemon(newInfo);
-  };
+  const { infoPokemon, isLoading } = useFetchPokemon(pokemon);
 
-  useEffect(() => {
-    getInfoPokemon();
-  }, []);
+  //   const [infoPokemon, setInfoPokemon] = useState([]);
 
+  //   const getInfoPokemon = async () => {
+  //     const newInfo = await getPokemon(pokemon);
+  //     setInfoPokemon(newInfo);
+  //   };
+
+  //   useEffect(() => {
+  //     getInfoPokemon();
+  //   }, []);
+    console.log(infoPokemon);
   return (
     <>
-      <ItemPokemon infoPokemon={infoPokemon}/>
+      {isLoading ? <h2>Cargando...</h2> :
+      <ItemPokemon infoPokemon={infoPokemon} />}
     </>
   );
 };
