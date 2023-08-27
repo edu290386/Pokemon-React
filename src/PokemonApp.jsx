@@ -1,6 +1,5 @@
 import { useState } from "react";
-import { AddPokemon } from "./components/AddPokemon";
-import { GridPokemon } from "./components/GridPokemon";
+import { AddPokemon , GridPokemon } from "./components"
 
 export const PokemonApp = () => {
   const [pokemons, setPokemons] = useState(["charizard"]);

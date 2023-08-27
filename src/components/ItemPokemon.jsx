@@ -1,8 +1,6 @@
-import { AbilitiesPokemon } from "./AbilitiesPokemon";
-import { EvolutionPokemon } from "./EvolutionPokemon";
-import { InformationPokemon } from "./InformationPokemon";
-import { StatisticPokemon } from "./StatisticPokemon";
-import { TypePokemon } from "./TypePokemon";
+import { AbilitiesPokemon, EvolutionPokemon } from "./";
+import { InformationPokemon , StatisticPokemon } from "./";
+import { TypePokemon } from "./";
 
 export const ItemPokemon = ({ infoPokemon, bioPokemon, evolutionPokemon }) => {
   const { sprites, types, abilities, id, name, height, weight, stats } =
