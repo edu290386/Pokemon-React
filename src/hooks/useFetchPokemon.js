@@ -13,7 +13,8 @@ export const useFetchPokemon = (pokemon) => {
     setInfoPokemon(data);
     setBioPokemon(data2);
 
-    const idEvolution = getChainEvolution(data2?.evolution_chain.url);
+    const idEvolution = getChainEvolution(data2?.evolution_chain?.url);
+    console.log(idEvolution)
     const data3 = await evolutionChain(idEvolution);
     setEvolutionPokemon(data3);
     setIsLoading(false);

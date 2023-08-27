@@ -3,7 +3,7 @@ import { AddPokemon } from "./components/AddPokemon";
 import { GridPokemon } from "./components/GridPokemon";
 
 export const PokemonApp = () => {
-  const [pokemons, setPokemons] = useState(["pikachu", "ditto","metapod","charizard"]);
+  const [pokemons, setPokemons] = useState(["charizard"]);
 
   const onAddPokemon = (newPokemon) => {
     const duplicatedPokemon = pokemons.some(
